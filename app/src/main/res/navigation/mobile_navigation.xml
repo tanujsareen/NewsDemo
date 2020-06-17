@@ -9,5 +9,17 @@
         android:id="@+id/listFragment"
         android:name="in.srntech90.doubtnut.ui.list.ListFragment"
         android:label="list_fragment"
-        tools:layout="@layout/list_fragment" />
+        tools:layout="@layout/list_fragment" >
+        <action
+            android:id="@+id/action_listFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="in.srntech90.doubtnut.ui.detail.DetailFragment"
+        android:label="DetailFragment" >
+        <argument
+            android:name="articlesItem"
+            app:argType="in.srntech90.doubtnut.ui.list.model.ArticlesItem" />
+    </fragment>
 </navigation>
